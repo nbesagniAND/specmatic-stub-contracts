@@ -1,41 +1,46 @@
 ---
 openapi: "3.0.1"
 info:
-  title: "Contract for the petstore service"
+  title: "Contract for employee roster"
   version: "1"
 paths:
-  /pets/{petid}:
+  '/employee':
     get:
-      summary: "Should be able to get a pet by petId"
-      parameters:
-        - name: "petid"
-          in: "path"
-          required: true
-          schema:
-            type: "number"
-          examples:
-            200_OKAY:
-              value: 1
+      summary: "Should be able to get employee"
       responses:
         "200":
-          description: "Should be able to get a pet by petId"
+          description: "Should be able to get employee"
           content:
             application/json:
               schema:
-                required:
-                  - "id"
-                  - "name"
-                  - "status"
-                  - "type"
-                properties:
-                  id:
-                    type: "number"
-                  name:
-                    type: "string"
-                  type:
-                    type: "string"
-                  status:
-                    type: "string"
+                $ref: '#/components/schemas/Employee'
               examples:
                 200_OKAY:
                   value: '{any}'
+
+components:
+  schemas:
+    Employee:
+      title: Employee
+      type: object
+      required:
+        - id
+        - name
+        - roster
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        roster:
+          type: array
+          items:
+            $ref: '#/components/schemas/RosterDate'
+    RosterDate:
+      title: RosterDate
+      type: object
+      properties:
+        date:
+          type: string
+        activity:
+          type: string

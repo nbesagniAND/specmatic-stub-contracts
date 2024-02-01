@@ -1,0 +1,42 @@
+{
+    "http-request": {
+        "path": "/employee",
+        "method": "GET"
+    },
+    "http-response": {
+        "status": 200,
+        "body": {
+            "id": "A123456",
+            "name": "Nick Besagni",
+            "roster": [
+                {
+                    "date": "2024-01-01",
+                    "activity": "Leave"
+                },
+                {
+                    "date": "2024-01-02",
+                    "activity": "Leave"
+                },
+                {
+                    "date": "2024-01-03",
+                    "activity": "Leave"
+                },
+                {
+                    "date": "2024-01-04",
+                    "activity": "Off duty"
+                },
+                {
+                    "date": "2024-01-05",
+                    "activity": "Off duty"
+                },
+                {
+                    "date": "2024-01-06",
+                    "activity": "Standby - airport"
+                },
+                {
+                    "date": "2024-01-07",
+                    "activity": "Standby - home"
+                }]
+        }
+    }
+}
