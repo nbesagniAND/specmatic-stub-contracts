@@ -1,0 +1,29 @@
+---
+openapi: "3.0.1"
+info:
+  title: "Contract for employee roster"
+  version: "1"
+paths:
+  /employee:
+    get:
+      summary: "Should be able to get employee"
+      responses:
+        "200":
+          description: "Should be able to get employee"
+          content:
+            application/json:
+              schema:
+                required:
+                  - "id"
+                  - "name"
+                  - "roster"
+                properties:
+                  id:
+                    type: "string"
+                  name:
+                    type: "string"
+                  roster:
+                    type: "array"
+              examples:
+                200_OKAY:
+                  value: '{any}'

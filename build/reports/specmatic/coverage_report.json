@@ -1,0 +1,1 @@
+{"specmaticConfigPath":"/Users/nicholasbesagni/Projects/specmatic-stub-server/specmatic.json","apiCoverage":[{"type":null,"repository":null,"branch":null,"specification":"service.yaml","serviceType":"HTTP","operations":[{"path":"/pets/{petid}","method":"GET","responseCode":200,"count":1,"coverageStatus":"covered"}]}]}
